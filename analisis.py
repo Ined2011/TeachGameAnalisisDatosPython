@@ -19,5 +19,16 @@ promedio_por_materia = df.groupby("materia")["nota"].mean()
 print("\n✅ Nota promedio por materia:")
 print(promedio_por_materia)
 
+# 3. Filtrado y Conteo
+aprobados_matematicas = df[
+	(df["materia"] == "matemáticas") & (df["nota"] >= 3)
+]
+
+print(
+	f"\n✅ Estudiantes que aprobaron Matemáticas: {len(aprobados_matematicas)}"
+)
+``
+
+
 
 
